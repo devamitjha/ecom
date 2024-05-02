@@ -1,0 +1,33 @@
+@import "../Components.scss";
+.parallax-banner{
+    height:100%;
+}
+.parallax-banner-section{
+    width:550px;
+    height:70%;
+    background-color:rgba($white, .8);
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    position:absolute;
+    @extend .d_flex;
+    border-radius: 8px;
+    flex-direction: column;
+    padding:2rem 3rem;
+    span{
+        @extend .text-3xl;
+    }
+    p{
+        @extend .text-sm;
+        text-align: center;
+    }
+    .btn-shop-now{
+        width:12rem;
+        height:3rem;
+        background-color:$black;
+        color:$white;
+        border-radius: 9999px;
+        cursor:pointer;
+        @extend .text-xs;
+    }
+}

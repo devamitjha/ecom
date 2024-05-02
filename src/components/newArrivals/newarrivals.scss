@@ -1,0 +1,48 @@
+@import "../Components.scss";
+.tab-item{
+    ul{
+        margin:0;
+        padding:0;
+        list-style-type: none;
+        li{
+            padding:10px 15px;
+            border-radius: 9999px;            
+            @extend .text-sm;
+            cursor:pointer;
+            +li{
+                margin-left:1rem;
+            }
+            &.active{
+                background-color: $accent;
+                font-weight: 500;
+            }
+        }
+    }
+}
+.tab-content{
+    .img-container{
+        overflow: hidden;
+        cursor:pointer;
+        img{
+            display:block;
+            width:100%;
+            transition:transform .3s ease-in-out;
+            &:hover{
+                transform:scale(1.1);
+            }
+        }
+    }
+}
+
+.button-load-more{
+    width:12rem;
+    height:3rem;
+    border-radius: 9999px;
+    transition:all .3s ease-in-out;
+    @extend .text-sm;
+    &:hover{
+        background-color:$black;
+        color:$white;
+        cursor:pointer;
+    }
+}
