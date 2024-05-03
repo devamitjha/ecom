@@ -39,6 +39,12 @@ a{
     margin-top:3.25rem;
 }
 
+.mx-1450{
+    max-width: 1450px;
+    width:100%;
+    display: block;
+}
+
 //typo
 .text-4xl {   
     font-size: 2.25rem;
@@ -98,3 +104,27 @@ a{
         font-family: $incon;
     }
 }
+.icon-set{
+    width:48px;
+    height:48px;  
+    position:relative;  
+    cursor:pointer;
+    .badge{
+     position:absolute;
+     top:0;
+     right:0;
+     font-size:10px;
+     background-color: $danger_color;
+    }
+    .icon{
+     font-size:18px;
+    }
+    +.icon-set{
+     margin-left:4px;
+    }
+    .r-icon{
+     &:hover{
+         color:$danger_color;
+     }
+    }
+ }

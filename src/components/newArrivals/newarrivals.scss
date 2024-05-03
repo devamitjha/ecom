@@ -23,12 +23,40 @@
     .img-container{
         overflow: hidden;
         cursor:pointer;
+        position:relative;
         img{
             display:block;
             width:100%;
-            transition:transform .3s ease-in-out;
-            &:hover{
+            transition:transform .3s ease-in-out;           
+        }
+        .product-item-action{
+            position:absolute;
+            left:50%;
+            bottom:-80px;
+            transform:translateX(-50%);
+            transition:bottom .3s ease-in-out;
+            .icon-set{
+                border-radius: 100%;
+                transition:all .3s ease-in-out;
+                background-color: $white;               
+                &:hover{
+                    background-color:$black;
+                    border-color: transparent!important;
+                    .r-icon{
+                        color:$white;
+                    }
+                }
+                +.icon-set{
+                    margin-left:1rem;
+                }
+            }
+        }
+        &:hover{
+            img{
                 transform:scale(1.1);
+            }
+            .product-item-action{
+                bottom:2rem;
             }
         }
     }
@@ -44,5 +72,126 @@
         background-color:$black;
         color:$white;
         cursor:pointer;
+    }
+}
+
+.product-item-details{
+    display:block;
+    width:100%;
+    padding:.75rem .75rem .75rem 0;
+    .product-title{
+        @extend .text-sm;
+    }
+    .price-and-stars{
+        .price{
+            color:rgba($black, .7);
+            font-weight: 500;
+            @extend .text-sm;
+        }
+        .r-icon{
+            color:rgba($black, .7);
+            @extend .text-sm;
+        }
+    }
+    .available-color{
+        margin-top:.5rem;
+        .color{
+            width:16px;
+            height:16px;
+            border-radius: 100%;
+            cursor: pointer;
+            position:relative;
+            &.active{
+                &:after{
+                    position: absolute;
+                    content:"";
+                    width:20px;
+                    height:20px;
+                    top:50%;
+                    left:50%;
+                    transform:translate(-50%, -50%);
+                    background-color: transparent;
+                    border:1px solid;
+                    border-radius: 100%;;
+                }
+            }
+            +.color{
+                margin-left:.5rem;                
+            }
+            &.black{
+                background-color: $black;
+                &.active{
+                    &:after{
+                        border-color:$black;
+                    }
+                }
+            }
+            &.blue{
+                background-color: $primary_color;
+                &.active{
+                    &:after{
+                        border-color:$primary_color;
+                    }
+                }
+            }
+            &.red{
+                background-color: $danger_color;
+                &.active{
+                    &:after{
+                        border-color:$danger_color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.badge-product-sale {
+    display: inline-flex;
+    position: absolute;
+    text-align: center;
+    top:35px;
+    right:-10px;
+    z-index: 2;
+    min-width: 100px;
+    transform: rotate(90deg);
+    span {
+        position: relative;
+        background: $danger_color;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 400;
+        height: 28px;
+        line-height: 28px;
+        padding: 0 10px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        min-width: 50px;
+        border-radius: 0;
+        min-height: auto;
+        border: 0;
+        &:before {
+            border: 5px solid $danger_color;
+            border-color: $danger_color transparent transparent $danger_color;
+            border-width: 9px 5px;
+            position: absolute;
+            right: -9px;
+            top: 0;
+            content: "";
+            z-index: 1;
+        }
+        &:after {
+            border: 5px solid $danger_color;
+            border-color: transparent transparent $danger_color $danger_color;
+            border-width: 10px 5px;
+            position: absolute;
+            right: -9px;
+            bottom: 0;
+            content: "";
+            z-index: 1;
+        }
     }
 }
