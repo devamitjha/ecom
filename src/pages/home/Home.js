@@ -6,20 +6,20 @@ import "./home.scss";
 import BlogCard from '../../components/blogCard/BlogCard';
 function Home() {
     return (
-        <section className="main-container">
-            <section className="hero-slider">
+        <div className="main-container">
+            <div className="hero-slider">
                 <Hero />
-            </section>
-            <section className="widget new-arrivals">
+            </div>
+            <div className="widget new-arrivals">
                 <NewArrivals title="New Arrivals" />
-            </section>
-            <section className="mid-banner mt-50">
+            </div>
+            <div className="mid-banner mt-50">
                 <Parallaxbanner />
-            </section>
-            <section className="blog-card">
+            </div>
+            <div className="blog-card">
                 <BlogCard title="The Blog" subTitle="Provide you with useful knowledge about fashion trend" />
-            </section>
-        </section>
+            </div>
+        </div>
     )
 }
 

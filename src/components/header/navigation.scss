@@ -5,3 +5,20 @@ span{
     }
 }
 
+.navbar-brand{
+    width:60px;
+    img{
+        width:100%;
+    }
+}
+.navbar-nav{
+ .nav-link{
+    @extend .text-sm;
+    +.nav-link{
+        margin-left:1rem;
+    }
+    &:hover{
+        color:$danger_color;
+    }
+ }   
+}

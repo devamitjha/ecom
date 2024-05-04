@@ -8,7 +8,7 @@ const Parallaxbanner = () => {
     return (
         <ParallaxProvider>
             <ParallaxBanner
-                layers={[{ image: '/images/parallax.jpg', speed: -15 }]}
+                layers={[{ image: '/images/mid-section.jpg', speed: -15 }]}
                 className="parallax-banner"
             />
             <div className="parallax-banner-section">

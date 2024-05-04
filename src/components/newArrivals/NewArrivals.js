@@ -14,17 +14,17 @@ const NewArrivals = (props) => {
             </div>
             <div className="row tab-item mt-4">
                 <ul className="d-flex justify-content-center align-items-center">
-                    <li className="text-uppercase active">Ring</li>
-                    <li className="text-uppercase">Earring</li>
-                    <li className="text-uppercase">Pendants</li>
-                    <li className="text-uppercase">Mangalsutra</li>
-                    <li className="text-uppercase">Bracelets</li>
+                    <li className="text-uppercase active">Tops</li>
+                    <li className="text-uppercase">Dresses</li>
+                    <li className="text-uppercase">T-shirts</li>
+                    <li className="text-uppercase">Bags</li>
+                    <li className="text-uppercase">Shoes</li>
                 </ul>
             </div>
             <div className="row tab-content mt-4 position-relative">
                 <div className="col-6 col-sm-3 mb-4 position-relative">
-                    <div class="badge-product-sale">
-                        <span class="new">-15%</span>
+                    <div className="badge-product-sale">
+                        <span className="new">-15%</span>
                     </div>
                     <div className="img-container rounded">
                         <img src={process.env.PUBLIC_URL + "/images/product-1.jpg"} alt="na" />
@@ -152,8 +152,8 @@ const NewArrivals = (props) => {
                     </div>
                 </div>
                 <div className="col-6 col-sm-3 mb-4 position-relative">
-                    <div class="badge-product-sale">
-                        <span class="new">-15%</span>
+                    <div className="badge-product-sale">
+                        <span className="new">-15%</span>
                     </div>
                     <div className="img-container rounded">
                         <img src={process.env.PUBLIC_URL + "/images/product-4.jpg"} alt="na" />
@@ -281,8 +281,8 @@ const NewArrivals = (props) => {
                     </div>
                 </div>
                 <div className="col-6 col-sm-3 mb-4 position-relative">
-                    <div class="badge-product-sale">
-                        <span class="new">-15%</span>
+                    <div className="badge-product-sale">
+                        <span className="new">-15%</span>
                     </div>
                     <div className="img-container rounded">
                         <img src={process.env.PUBLIC_URL + "/images/product-7.jpg"} alt="na" />
@@ -368,9 +368,6 @@ const NewArrivals = (props) => {
                     </div>
                 </div>
             </div>
-            {/* <div className='button-load-more d-flex justify-content-center align-items-center border m-auto text-uppercase'>
-                Load More
-            </div> */}
         </div>
     )
 }

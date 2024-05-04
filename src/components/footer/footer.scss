@@ -1,1 +1,15 @@
 @import "../../components/Components.scss";
+
+footer{
+    .r-icon{
+        cursor:pointer;
+        +.r-icon{
+            margin-left:1rem;
+        }
+    }
+    span{
+        &.info{
+            @extend .text-sm;
+        }
+    }
+}
