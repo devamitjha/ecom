@@ -5,6 +5,7 @@ import "./category.scss";
 import { IconContext } from "react-icons";
 import { AiOutlineEye , AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { IoStar, IoStarHalf  } from "react-icons/io5";
+import SidebarFilter from '../../components/sidebarFilter/SidebarFilter';
 
 function Category() {
     
@@ -35,8 +36,10 @@ function Category() {
                 <div className="row">
                     <CategorySlider/>
                 </div>
-                <div className="row mt-5">
-                    <div className="col-12 col-sm-3 sidebar">sidebar</div>
+                <div className="row my-5 border-top">
+                    <div className="col-12 col-sm-3">
+                        <SidebarFilter/>
+                    </div>
                     <div className="col-12 col-sm-9 main-category">
                         <div className="row">
                             <div className="sort-filter d-flex justify-content-between align-items-center">
