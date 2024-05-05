@@ -6,21 +6,24 @@ import { IoStar, IoStarHalf  } from "react-icons/io5";
 
 const NewArrivals = (props) => {
     return (
-        <div className="container mb-5">
+        <div className="container">
             <div className="row">
                 <div className="widget-title text-center mt-50">
                     <h3>{props.title}</h3>
                 </div>
             </div>
-            <div className="row tab-item mt-4">
-                <ul className="d-flex justify-content-center align-items-center">
-                    <li className="text-uppercase active">Tops</li>
-                    <li className="text-uppercase">Dresses</li>
-                    <li className="text-uppercase">T-shirts</li>
-                    <li className="text-uppercase">Bags</li>
-                    <li className="text-uppercase">Shoes</li>
-                </ul>
-            </div>
+            {
+               props.type==="home" && <div className="row tab-item mt-4">
+                    <ul className="d-flex justify-content-center align-items-center">
+                        <li className="text-uppercase active">Tops</li>
+                        <li className="text-uppercase">Dresses</li>
+                        <li className="text-uppercase">T-shirts</li>
+                        <li className="text-uppercase">Bags</li>
+                        <li className="text-uppercase">Shoes</li>
+                    </ul>
+                </div>
+            }
+            
             <div className="row tab-content mt-4 position-relative">
                 <div className="col-6 col-sm-3 mb-4 position-relative">
                     <div className="badge-product-sale">

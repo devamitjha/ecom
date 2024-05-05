@@ -24,6 +24,9 @@
         }
     }
 }
+.breadcrumb{
+    @extend .text-xs;
+}
 .rating-section{
     display:inline-flex;
     padding:.25rem .5rem;
@@ -166,6 +169,68 @@
             }
         }
     }
+}
+
+.product-offers{
+    .title-offer{
+        font-size:1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom:.75rem;
+        display:block;
+    }
+    .offers-container{
+        .pdp-offers-offerTitle{
+            font-size:.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom:.5rem;
+            display:block;
+            span{
+                color:$orange_color;
+            }
+        }
+        .pdp-offers-offerDesc{
+            li{
+                margin-left:1.2rem;
+                @extend .text-sm;
+                +li{
+                    margin-top:.75rem;
+                }
+            }
+        }
+    }
+}
+
+.product-info{
+   .product-info-title{
+        font-size:1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom:.75rem;
+        display:block;
+   } 
+   .pdp-product-description-content{
+        margin-top:2.5rem;
+        .title{
+            font-size:.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom:.3rem;
+            display:block;
+        }
+        ul{
+            margin:0;
+            padding:0;
+            list-style: none;
+            li{
+                @extend .text-sm;
+                +li{
+                    margin-top:.4rem;
+                }
+            }
+        }
+   }
 }
 
 

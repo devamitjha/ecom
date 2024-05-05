@@ -10,8 +10,8 @@ function Home() {
             <div className="hero-slider">
                 <Hero />
             </div>
-            <div className="widget new-arrivals">
-                <NewArrivals title="New Arrivals" />
+            <div className="widget new-arrivals mb-5">
+                <NewArrivals title="New Arrivals" type="home" />
             </div>
             <div className="mid-banner mt-50">
                 <Parallaxbanner />
