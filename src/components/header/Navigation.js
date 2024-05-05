@@ -6,7 +6,7 @@ import "./navigation.scss";;
 
 function Navigation() {
     return (
-        <seciton className="block border-bottom bg-white">
+        <div className="block border-bottom bg-white">
             <div className="container">            
                 <div className="row">
                     <div className="main-navigation d-flex justify-content-between align-items-center">
@@ -53,7 +53,7 @@ function Navigation() {
                     </div>
                 </div >
             </div >
-        </seciton>
+        </div>
     )
 }
 

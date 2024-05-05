@@ -6,6 +6,7 @@ import { IconContext } from "react-icons";
 import { AiOutlineEye , AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { IoStar, IoStarHalf  } from "react-icons/io5";
 import SidebarFilter from '../../components/sidebarFilter/SidebarFilter';
+import { Link } from 'react-router-dom';
 
 function Category() {
     
@@ -52,7 +53,7 @@ function Category() {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-6 col-sm-4 mb-4 position-relative">
+                            <Link to="/product/shirts" className="col-6 col-sm-4 mb-4 position-relative">
                                 <div className="badge-product-sale">
                                     <span className="new">-15%</span>
                                 </div>
@@ -96,8 +97,8 @@ function Category() {
                                         <div className="color red active"></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-6 col-sm-4 mb-4 position-relative">
+                            </Link>
+                            <Link to="/product/shirts" className="col-6 col-sm-4 mb-4 position-relative">
                                 <div className="badge-product-sale">
                                     <span className="new">-15%</span>
                                 </div>
@@ -141,8 +142,8 @@ function Category() {
                                         <div className="color red active"></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-6 col-sm-4 mb-4 position-relative">
+                            </Link>
+                            <Link to="/product/shirts" className="col-6 col-sm-4 mb-4 position-relative">
                                 <div className="badge-product-sale">
                                     <span className="new">-15%</span>
                                 </div>
@@ -186,8 +187,8 @@ function Category() {
                                         <div className="color red active"></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-6 col-sm-4 mb-4 position-relative">
+                            </Link>
+                            <Link to="/product/shirts" className="col-6 col-sm-4 mb-4 position-relative">
                                 <div className="badge-product-sale">
                                     <span className="new">-15%</span>
                                 </div>
@@ -231,8 +232,8 @@ function Category() {
                                         <div className="color red active"></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-6 col-sm-4 mb-4 position-relative">
+                            </Link>
+                            <Link to="/product/shirts" className="col-6 col-sm-4 mb-4 position-relative">
                                 <div className="badge-product-sale">
                                     <span className="new">-15%</span>
                                 </div>
@@ -276,8 +277,8 @@ function Category() {
                                         <div className="color red active"></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-6 col-sm-4 mb-4 position-relative">
+                            </Link>
+                            <Link to="/product/shirts" className="col-6 col-sm-4 mb-4 position-relative">
                                 <div className="badge-product-sale">
                                     <span className="new">-15%</span>
                                 </div>
@@ -321,7 +322,7 @@ function Category() {
                                         <div className="color red active"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                         <div className='my-5 button-load-more d-flex justify-content-center align-items-center border m-auto text-uppercase'>
                             Load More
