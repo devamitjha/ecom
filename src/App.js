@@ -10,6 +10,11 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import About from "./pages/about/About";
 import Nopage from "./pages/nopage/Nopage";
+
+import BlogLayout from "./pages/blog/BlogLayout";
+import PostLists from "./pages/blog/blogPost/PostLists";
+import PostDetails from "./pages/blog/postDetails/PostDetails";
+
 function App() {
   return (
     <>
@@ -26,6 +31,12 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="*" element={<Nopage />} />
         </Route>
+        <Route path='blog' element={<BlogLayout />}>
+          <Route index element={<PostLists />} />
+          <Route path=":slug" element={<PostDetails />} />
+        </Route>
+
+
       </Routes>
     </>
   );

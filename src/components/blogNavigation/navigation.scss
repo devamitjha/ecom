@@ -1,0 +1,38 @@
+@import "../Components.scss";
+
+.blog-container{
+    display:block;
+    padding:0 85px;
+    .navbar{
+        margin: 0 1rem;
+        .nav-link{
+            color:$white;
+        }
+    }
+}
+.full-screen-nav{
+    .letTalk{
+        background-color: $btn_grey;
+        border-radius: 99999px;
+        padding: .5rem 1rem;
+        font-size: .85rem;
+        cursor: pointer;
+        color:$black;
+    }
+    .menu{
+        width:56px;
+        height:56px;
+        margin-left:1rem;
+        cursor:pointer;
+        span{
+            display:block;
+            width:30px;
+            height:3px;
+            background-color:$white;
+            +span{
+                margin-top:5px;
+            }
+        }
+    }
+   
+}

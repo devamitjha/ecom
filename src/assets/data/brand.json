@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+        "_id": "1",
+        "name": "Roadster",
+        "slug": ""
+    },
+    {
+        "_id": "2",
+        "name": "Friskers",
+        "slug": ""
+    },
+    {
+        "_id": "3",
+        "name": "HRX",
+        "slug": "by Hrithik Roshan"
+    },
+    {
+        "_id": "4",
+        "name": "Tommy Hilfiger",
+        "slug": ""
+    },
+    {
+        "_id": "5",
+        "name": "WROGN",
+        "slug": ""
+    },
+    {
+        "_id": "6",
+        "name": "VIMAL JONNEY",
+        "slug": ""
+    },
+    {
+        "_id": "7",
+        "name": "Jack & Jones",
+        "slug": ""
+    }    
+    
+  ],
+  "status": 200,
+  "message": "Success! Category List."
+}

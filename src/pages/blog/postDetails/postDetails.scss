@@ -1,0 +1,136 @@
+@import "../../../components/Components.scss";
+.pt-80{
+    padding-top:5rem;
+}
+.postDetails{
+    display:block;
+    margin-top:3rem;
+    .post-breadcrumb{
+        .breadcrumb{
+            li{
+                color:$white;
+                a{
+                    color:$white;
+                }
+                &:before{
+                    color:$white!important;
+                }
+                &.active{
+                    color:rgba($white, .5);
+                }
+            }
+        }
+    }
+    .post-author-and-date-box{
+        margin-bottom:4.75rem;
+        .author-section{
+            .avatar{
+                width:50px;
+                height:50px;
+                border-radius: 100%;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                img{
+                    display:block;
+                    width:100%;
+                    height:100%;
+                    object-fit: cover;
+                }
+            } 
+            .author-name{
+                font-size:1rem;
+                color:$white;
+                margin-left:1rem;
+            } 
+        }
+        .date{
+            color:rgba($white, .5);
+            font-size:.85rem;
+        }
+        .comment{
+            color:rgba($white, .5);
+            font-size:.85rem;
+        }
+    }
+    .item-seperator{
+        position:relative;
+        &:after{
+            content:"";
+            width:1px;
+            height:18px;
+            background-color: rgba($white,.5);
+            position:absolute;
+            right:-1rem;
+            top:50%;
+            transform: translateY(-50%);
+        }
+        +.item-seperator{
+            margin-left:2rem;
+        }
+        &:nth-last-child(1){
+            &:after{
+                content:none;
+            }
+        }
+    }
+    .post-title{
+        font-size:6.5rem;
+        font-family:$disoneMedium;
+        width:80%;
+        margin-bottom:2.4rem;
+        line-height: 1.3;
+    }
+    .feature-image{
+        display: block;
+        padding: 0 50px;
+        overflow: hidden;
+        height: 650px;
+        border-radius: 30px;
+    }
+    .post-details-wrapper{
+        display:flex;
+        .sticky-social{
+            .social-container{
+                display: flex;
+                flex-direction: column;
+                width: 50px;
+                background-color:rgba($white,.1);
+                border: 1px solid rgba($white, .1);
+                border-radius: 99999px;
+                .r-icon{
+                    display:flex;
+                    width:100%;
+                    height:46px;
+                    justify-content: center;
+                    align-items: center;
+                    cursor:pointer;
+                    color:rgba($white, .5);
+                }
+            }
+            
+        }
+        .post-content{
+            padding:0 2rem;
+            p{
+                font-size:.95rem;
+                line-height:1.75;
+                margin:0;
+                color:rgba($white, .8);
+                &.dropcap{
+                    &:first-letter{                   
+                        float: left;
+                        font-size: 6rem;
+                        line-height: 0.65;
+                        margin: 0.1em 0.1em 0.2em 0;
+                        color:$white;
+                    }
+                }
+                +p{
+                    margin-top:1rem;
+                }
+            }
+        }
+    }
+}

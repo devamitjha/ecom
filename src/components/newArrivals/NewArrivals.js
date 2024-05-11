@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./newarrivals.scss";
 import { IconContext } from "react-icons";
-import { AiOutlineEye , AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
-import { IoStar, IoStarHalf  } from "react-icons/io5";
+import { AiOutlineEye, AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
+import { IoStar, IoStarHalf } from "react-icons/io5";
 
 const NewArrivals = (props) => {
+    const [category, setCategory] = useState(["Tops", "Dresses", "T-shirts", "Bags", "Shoes"]);
+    const [active, setActive] = useState(0);
+
+    const setCurrentIndex = (index) => {
+        setActive(index);
+        //setCategory(prevCategory => [...prevCategory, index]);
+    }
+
     return (
         <div className="container">
             <div className="row">
@@ -13,17 +21,20 @@ const NewArrivals = (props) => {
                 </div>
             </div>
             {
-               props.type==="home" && <div className="row tab-item mt-4">
+                props.type === "home" && <div className="row tab-item mt-4">
                     <ul className="d-flex justify-content-center align-items-center">
-                        <li className="text-uppercase active">Tops</li>
-                        <li className="text-uppercase">Dresses</li>
-                        <li className="text-uppercase">T-shirts</li>
-                        <li className="text-uppercase">Bags</li>
-                        <li className="text-uppercase">Shoes</li>
+                        {category.map((item, index) => (
+                            <li key={index} className={`text-uppercase ${index === active ? 'active' : ''}`}
+                                onClick={() => setCurrentIndex(index)}
+                            >
+                                {item}
+                            </li>
+                        ))}
+
                     </ul>
                 </div>
             }
-            
+
             <div className="row tab-content mt-4 position-relative">
                 <div className="col-6 col-sm-3 mb-4 position-relative">
                     <div className="badge-product-sale">
@@ -39,12 +50,12 @@ const NewArrivals = (props) => {
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineHeart  />
+                                    <AiOutlineHeart />
                                 </IconContext.Provider>
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineEye/>
+                                    <AiOutlineEye />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -54,12 +65,12 @@ const NewArrivals = (props) => {
                         <div className="price-and-stars d-flex justify-content-between align-items-center my-1">
                             <div className="price"><span>$</span>200</div>
                             <div className="stars">
-                                <IconContext.Provider value={{className: "r-icon" }}>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStarHalf/>
+                                <IconContext.Provider value={{ className: "r-icon" }}>
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStarHalf />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -81,12 +92,12 @@ const NewArrivals = (props) => {
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineHeart  />
+                                    <AiOutlineHeart />
                                 </IconContext.Provider>
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineEye/>
+                                    <AiOutlineEye />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -96,12 +107,12 @@ const NewArrivals = (props) => {
                         <div className="price-and-stars d-flex justify-content-between align-items-center my-1">
                             <div className="price"><span>$</span>200</div>
                             <div className="stars">
-                                <IconContext.Provider value={{className: "r-icon" }}>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStarHalf/>
+                                <IconContext.Provider value={{ className: "r-icon" }}>
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStarHalf />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -123,12 +134,12 @@ const NewArrivals = (props) => {
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineHeart  />
+                                    <AiOutlineHeart />
                                 </IconContext.Provider>
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineEye/>
+                                    <AiOutlineEye />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -138,12 +149,12 @@ const NewArrivals = (props) => {
                         <div className="price-and-stars d-flex justify-content-between align-items-center my-1">
                             <div className="price"><span>$</span>200</div>
                             <div className="stars">
-                                <IconContext.Provider value={{className: "r-icon" }}>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStarHalf/>
+                                <IconContext.Provider value={{ className: "r-icon" }}>
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStarHalf />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -168,12 +179,12 @@ const NewArrivals = (props) => {
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineHeart  />
+                                    <AiOutlineHeart />
                                 </IconContext.Provider>
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineEye/>
+                                    <AiOutlineEye />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -183,12 +194,12 @@ const NewArrivals = (props) => {
                         <div className="price-and-stars d-flex justify-content-between align-items-center my-1">
                             <div className="price"><span>$</span>200</div>
                             <div className="stars">
-                                <IconContext.Provider value={{className: "r-icon" }}>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStarHalf/>
+                                <IconContext.Provider value={{ className: "r-icon" }}>
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStarHalf />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -210,12 +221,12 @@ const NewArrivals = (props) => {
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineHeart  />
+                                    <AiOutlineHeart />
                                 </IconContext.Provider>
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineEye/>
+                                    <AiOutlineEye />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -225,12 +236,12 @@ const NewArrivals = (props) => {
                         <div className="price-and-stars d-flex justify-content-between align-items-center my-1">
                             <div className="price"><span>$</span>200</div>
                             <div className="stars">
-                                <IconContext.Provider value={{className: "r-icon" }}>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStarHalf/>
+                                <IconContext.Provider value={{ className: "r-icon" }}>
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStarHalf />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -252,12 +263,12 @@ const NewArrivals = (props) => {
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineHeart  />
+                                    <AiOutlineHeart />
                                 </IconContext.Provider>
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineEye/>
+                                    <AiOutlineEye />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -267,12 +278,12 @@ const NewArrivals = (props) => {
                         <div className="price-and-stars d-flex justify-content-between align-items-center my-1">
                             <div className="price"><span>$</span>200</div>
                             <div className="stars">
-                                <IconContext.Provider value={{className: "r-icon" }}>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStarHalf/>
+                                <IconContext.Provider value={{ className: "r-icon" }}>
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStarHalf />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -297,12 +308,12 @@ const NewArrivals = (props) => {
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineHeart  />
+                                    <AiOutlineHeart />
                                 </IconContext.Provider>
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineEye/>
+                                    <AiOutlineEye />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -312,12 +323,12 @@ const NewArrivals = (props) => {
                         <div className="price-and-stars d-flex justify-content-between align-items-center my-1">
                             <div className="price"><span>$</span>200</div>
                             <div className="stars">
-                                <IconContext.Provider value={{className: "r-icon" }}>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStarHalf/>
+                                <IconContext.Provider value={{ className: "r-icon" }}>
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStarHalf />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -328,7 +339,7 @@ const NewArrivals = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className="col-6 col-sm-3 mb-4 position-relative">                   
+                <div className="col-6 col-sm-3 mb-4 position-relative">
                     <div className="img-container rounded">
                         <img src={process.env.PUBLIC_URL + "/images/product-8.jpg"} alt="na" />
                         <div className="product-item-action d-flex justify-content-center align-items-center">
@@ -339,12 +350,12 @@ const NewArrivals = (props) => {
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineHeart  />
+                                    <AiOutlineHeart />
                                 </IconContext.Provider>
                             </div>
                             <div className="icon-set border d-flex justify-content-center align-items-center">
                                 <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
-                                    <AiOutlineEye/>
+                                    <AiOutlineEye />
                                 </IconContext.Provider>
                             </div>
                         </div>
@@ -354,12 +365,12 @@ const NewArrivals = (props) => {
                         <div className="price-and-stars d-flex justify-content-between align-items-center my-1">
                             <div className="price"><span>$</span>200</div>
                             <div className="stars">
-                                <IconContext.Provider value={{className: "r-icon" }}>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStar/>
-                                    <IoStarHalf/>
+                                <IconContext.Provider value={{ className: "r-icon" }}>
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStar />
+                                    <IoStarHalf />
                                 </IconContext.Provider>
                             </div>
                         </div>

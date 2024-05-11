@@ -1,6 +1,26 @@
+@font-face {
+    font-family: DidoneLight;
+    src: url('../assets/fonts/didone-light.otf') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Didone;
+    // src: url('fonts/didone-medium.otf') format('woff');
+    src: url("../assets/fonts/didone-medium.otf") format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
 $dmSans:'DM Sans', sans-serif;
 $incon:'Inconsolata', monospace;
 $popins:'Poppins', sans-serif;
+$popins:'Poppins', sans-serif;
+$disoneMedium:'Didone', sans-serif;
+$disoneLight:'DidoneLight', sans-serif;
 
 $primary_color:#0032ff;
 $secondary_color:#527ceb;
@@ -21,6 +41,8 @@ $border:#f1f5f9;
 $slug:#fef9c3;
 $slug-color:#854d0e;
 $light_grey:#bfc0c6;
+$blog_bg:#0f183e;
+$post_list_bg:#1b2448;
 * {
     margin: 0;
     padding: 0;

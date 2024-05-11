@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { IconContext } from "react-icons";
-import { IoStar  } from "react-icons/io5";
+import { IoStar } from "react-icons/io5";
 import "./productpage.scss";
 import { AiOutlineUser, AiOutlineHeart, AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 import NewArrivals from '../../components/newArrivals/NewArrivals';
 import { Link } from 'react-router-dom';
 
 function ProductPage() {
-   
+
 
     return (
         <div className="container">
@@ -25,16 +25,16 @@ function ProductPage() {
                     <div className="col-sm-7">
                         <div className="media-container d-flex flex-wrap">
                             <div className="product-image">
-                                <img src={process.env.PUBLIC_URL + "/images/category/fashion_products_11_1.jpg"} alt="product"/>
+                                <img src={process.env.PUBLIC_URL + "/images/category/fashion_products_11_1.jpg"} alt="product" />
                             </div>
                             <div className="product-image">
-                                <img src={process.env.PUBLIC_URL + "/images/category/fashion_products_13_1.jpg"} alt="product"/>
+                                <img src={process.env.PUBLIC_URL + "/images/category/fashion_products_13_1.jpg"} alt="product" />
                             </div>
                             <div className="product-image">
-                                <img src={process.env.PUBLIC_URL + "/images/category/fashion_products_11_2.jpg"} alt="product"/>
+                                <img src={process.env.PUBLIC_URL + "/images/category/fashion_products_11_2.jpg"} alt="product" />
                             </div>
                             <div className="product-image">
-                                <img src={process.env.PUBLIC_URL + "/images/category/fashion_products_13_2.jpg"} alt="product"/>
+                                <img src={process.env.PUBLIC_URL + "/images/category/fashion_products_13_2.jpg"} alt="product" />
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ function ProductPage() {
                                 </div>
                                 <div className="rating-section justify-content-start align-items-center border">
                                     <div className="average-rating text-base d-flex align-items-center font-bold">
-                                        4.1<IconContext.Provider value={{className:"star-icon"}}><IoStar/></IconContext.Provider>
+                                        4.1<IconContext.Provider value={{ className: "star-icon" }}><IoStar /></IconContext.Provider>
                                     </div>
                                     <span className="mx-2">|</span>
                                     <div className="total-count">1k Ratings</div>
@@ -59,13 +59,13 @@ function ProductPage() {
                                     <div className="cross-price"><span>₹</span>4345</div>
                                     <div className="discount">(80% Off)</div>
                                 </div>
-                                    <p>inclusive of all taxes</p>
+                                <p>inclusive of all taxes</p>
                             </div>
                             <div className="product product-color">
                                 <span className="color-title">MORE COLORS</span>
                                 <div className="color-option-images d-flex">
-                                    <div className="color-image"><img src={process.env.PUBLIC_URL + "/images/category/fashion_products_16_1.jpg"} alt="product"/></div>
-                                    <div className="color-image"><img src={process.env.PUBLIC_URL + "/images/category/fashion_products_1_1.jpg"} alt="product"/></div>
+                                    <div className="color-image"><img src={process.env.PUBLIC_URL + "/images/category/fashion_products_16_1.jpg"} alt="product" /></div>
+                                    <div className="color-image"><img src={process.env.PUBLIC_URL + "/images/category/fashion_products_1_1.jpg"} alt="product" /></div>
                                 </div>
                             </div>
                             <div className="product product-sizes">
@@ -80,7 +80,7 @@ function ProductPage() {
                             </div>
                             <div className="product add-to-cart border-bottom">
                                 <div className="action-container d-flex">
-                                    <Link to ="/cart/1" className="atc d-flex justify-content-center align-items-center">
+                                    <Link to="/cart/1" className="atc d-flex justify-content-center align-items-center">
                                         <span className="icon-cart d-flex justify-content-center align-items-center">
                                             <IconContext.Provider value={{ size: 20, className: "r-icon" }}>
                                                 <AiOutlineShoppingCart />
